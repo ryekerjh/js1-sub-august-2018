@@ -1,17 +1,5 @@
 //Takehome 1.
-// let answer = powerOfTwo(parseInt(prompt("what do you want to square?", '2')));
-
-
-
-
-
-
-
-
-
-
-
-
+let answer = powerOfTwo(parseInt(prompt("what do you want to square?", '2')));
 
 function powerOfTwo(number) {
   if(!isNaN(number)) {
@@ -19,19 +7,19 @@ function powerOfTwo(number) {
   } else {
     alert("NaN");
     let answer = powerOfTwo(parseInt(prompt("That wasn't a number! What number?", '2')));
-    alert(answer);
   }
 };
 
-// alert(answer);
+alert(answer);
 
 //Takehome 3.
 function parseString(string) {
   let parsedLetter = string.charAt(0).toUpperCase();
-  let stringArr = string.split('');
-  stringArr.splice(0, 1, parsedLetter);
-  string = stringArr.join(''); //Replaces the first letter with the new uppercased letter
-  if(string.charAt(string.length - 1) !== '.') string = string + '.';
+  string.slice(1)
+  // let stringArr = string.split('');
+  // stringArr.splice(0, 1, parsedLetter);//Replaces the first letter with the new uppercased letter
+  // string = stringArr.join(''); 
+  if(string.charAt(string.length - 1) !== '.') string += '.';
   return string;
 }
 
@@ -41,7 +29,7 @@ function parseString(string) {
 //Takehome 4
 
 function reverseHalves(string) {
-  let halfIndex = string.length / 2;
+  let halfIndex = Math.ceil(string.length / 2);
   let firstHalf = string.substring(0, halfIndex);
   let secondHalf = string.substring(halfIndex, string.length);
   alert(`${secondHalf}${firstHalf}`);
