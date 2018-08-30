@@ -91,10 +91,13 @@ function calculateDogYears(age) {
 
 parseInt();
 
-"Ryeker".toUpperCase();
+"Ryeker".toUpperCase(); //METHOD
 
-
-
+// data.json(); //METHOD
+// 
+// console.log(); //METHOD
+// 
+// toString(); //FUNCTION
 
 
 
